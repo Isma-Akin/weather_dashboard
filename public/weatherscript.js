@@ -14,7 +14,7 @@ async function getWeather() {
         <h2>${data.city}</h2>
         <p>${data.temperature} °C</p>
         <p>${data.description}</p>
-        <img src="https://openweathermap.org/img/w/${data.icon}.png" alt="weather icon">
+        <img src="https://www.metaweather.com/static/img/weather/${data.icon}.svg" alt="Weather icon" alt="weather icon">
         
         `;
     } else {
