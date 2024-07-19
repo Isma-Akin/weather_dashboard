@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="index.css" rel="stylesheet" type="text/css">
     <title>Weather Forecast</title>
-    <style>
-        body {font-family: Calibri, sans-serif; text-align: center; padding: 20px; font-size: 25px}
-        #weather {margin-top: 20px; }
-        #weather img {vertical-align: middle; }
-    </style>
 </head>
 <body>
 <h1> Weather dashboard</h1>
+<div class="clickable-text-column">
+    <a href="#" class="clickable-text" onclick="getWeatherClick('London')">London</a>
+    <a href="#" class="clickable-text" onclick="getWeatherClick('New York')">New York</a>
+    <a href="#" class="clickable-text" onclick="getWeatherClick('Tokyo')">Tokyo</a>
+    <a href="#" class="clickable-text" onclick="getWeatherClick('Sydney')">Sydney</a>
+</div>
 <label for="city"></label><input type="text" id="city" placeholder="Enter city name">
 <button onclick="getWeather()">Get the weather</button>
 <div id="weather"></div>
