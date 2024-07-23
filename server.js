@@ -20,9 +20,11 @@ app.get('/weather', async (req, res) => {
         const weatherData = weatherResponse.data;
         const weather = {
             city: weatherData.nearest_area[0].areaName[0].value,
+            country: weatherData.nearest_area[0].country[0].value,
             temperature: weatherData.current_condition[0].temp_C,
             description: weatherData.current_condition[0].weatherDesc[0].value,
-            icon: weatherData.current_condition[0].weatherIconUrl[0].value
+            icon: weatherData.current_condition[0].weatherIconUrl[0].value,
+            time: weatherData.current_condition[0].localObsDateTime,
         };
         res.json(weather);
     } catch (error) {
