@@ -77,7 +77,7 @@ async function getWeather() {
         const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 
         weatherDiv.innerHTML = `
-        <h2>${data.city}</h2>
+        <h2>${data.city}, ${data.country}</h2>
         <p>${data.temperature} °C</p>
         <p>${description}</p>
         <img src="${iconUrl}" alt="Weather Icon">
@@ -106,7 +106,7 @@ async function getWeatherClick(city) {
         const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 
         weatherDiv.innerHTML = `
-        <h2>${data.city}</h2>
+        <h2>${data.city}, ${data.country}</h2>
         <p>${data.temperature} °C</p>
         <p>${description}</p>
         <img src="${iconUrl}" alt="Weather Icon">
