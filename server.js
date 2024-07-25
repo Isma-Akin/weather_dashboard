@@ -15,7 +15,7 @@ app.get('/weather', async (req, res) => {
 
     try {
         const encodedCity = encodeURIComponent(city);
-        const weatherResponse = await axios.get(`https://wttr.in/${encodedCity}?format=j1`);
+        const weatherResponse = await axios.get(`https://v2.wttr.in/${encodedCity}?format=j1`);
 
         const weatherData = weatherResponse.data;
         const weather = {
