@@ -81,6 +81,7 @@ async function getWeather() {
         <p>${data.temperature} °C</p>
         <p>${description}</p>
         <img src="${iconUrl}" alt="Weather Icon">
+        <p>${data.time}</p>
         `;
     } else {
         alert(data.error);
@@ -110,8 +111,8 @@ async function getWeatherClick(city) {
         <p>${data.temperature} °C</p>
         <p>${description}</p>
         <img src="${iconUrl}" alt="Weather Icon">
-        `;
-    } else {
+        <p>${data.time}</p>
+    `} else {
         alert(data.error);
     }
 }
