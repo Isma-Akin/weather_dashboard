@@ -76,9 +76,22 @@ async function getWeather() {
 
         const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 
+
+        if (data.temperature >= 30) {
+            weatherDiv.style.backgroundColor = "#cb7043";
+        } else if (data.temperature >= 20) {
+            weatherDiv.style.backgroundColor = "#e7d0aa";
+        } else if (data.temperature >= 10) {
+            weatherDiv.style.backgroundColor = "#a9b6b4";
+        } else if (data.temperature >= 0) {
+            weatherDiv.style.backgroundColor = '#6b7a8f';
+        } else {
+            weatherDiv.style.backgroundColor = 'green';
+        }
+
         weatherDiv.innerHTML = `
         <h2>${data.city}, ${data.country}</h2>
-        <p>${data.temperature} °C</p>
+        <p>${data.temperature}°C</p>
         <p>${description}</p>
         <img src="${iconUrl}" alt="Weather Icon">
         <p>${data.time}</p>
@@ -106,9 +119,21 @@ async function getWeatherClick(city) {
 
         const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 
+        if (data.temperature >= 30) {
+            weatherDiv.style.backgroundColor = "#cb7043";
+        } else if (data.temperature >= 20) {
+            weatherDiv.style.backgroundColor = "#e7d0aa";
+        } else if (data.temperature >= 10) {
+            weatherDiv.style.backgroundColor = "#a9b6b4";
+        } else if (data.temperature >= 0) {
+            weatherDiv.style.backgroundColor = '#6b7a8f';
+        } else {
+            weatherDiv.style.backgroundColor = 'green';
+        }
+
         weatherDiv.innerHTML = `
         <h2>${data.city}, ${data.country}</h2>
-        <p>${data.temperature} °C</p>
+        <p>${data.temperature}°C</p>
         <p>${description}</p>
         <img src="${iconUrl}" alt="Weather Icon">
         <p>${data.time}</p>
