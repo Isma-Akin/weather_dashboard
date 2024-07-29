@@ -33,3 +33,22 @@ body {
     margin-top: 20px;
     vertical-align: middle;
 }
+
+#weather {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    vertical-align: middle;
+}
+
+
+.child {
+    display: flex;
+    /*flex-direction: row;*/
+    /*align-items: center;*/
+    justify-content: center;
+    /*height: 100%;*/
+    /*width: 100%;*/
+    /*float: none;*/
+}

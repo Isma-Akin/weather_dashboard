@@ -56,6 +56,7 @@ const weatherIconMap = {
     'mist': '50d',
     'fog': '50d',
 };
+const rainGif = "https://www.icegif.com/wp-content/uploads/2021/10/icegif-453.gif";
 
 async function getWeather() {
        const city = document.getElementById('city').value;
@@ -112,6 +113,7 @@ async function getWeatherClick(city) {
 
     if (response.status === 200) {
         const weatherDiv = document.getElementById('weather');
+        const weatherImageDiv = document.getElementById('weatherimage');
 
         const description = data.description.trim().toLowerCase();
 
@@ -125,6 +127,9 @@ async function getWeatherClick(city) {
             weatherDiv.style.backgroundColor = "#e7d0aa";
         } else if (data.temperature >= 10) {
             weatherDiv.style.backgroundColor = "#a9b6b4";
+            weatherImageDiv.innerHTML = `
+            <img src="${rainGif}" alt="Weather image">
+            `
         } else if (data.temperature >= 0) {
             weatherDiv.style.backgroundColor = '#6b7a8f';
         } else {
