@@ -1,3 +1,4 @@
+/*The element that controls the attributes of the body of the html doc*/
 body {
     font-family: Calibri, sans-serif;
     text-align: center;
@@ -10,17 +11,18 @@ body {
     flex-direction: column;
     align-items: center;
 }
-
+/*The element that controls the attributes of the clickable text of the column*/
 .clickable-text {
     color: #008CBA;
     text-decoration: none;
     margin: 5px 0;
     padding: 10px;
-    border: 1px solid transparent;
+    border: 2px solid black;
     border-radius: 5px;
     transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
+/*The clickable text hover property that controls the color of the hover*/
 .clickable-text:hover {
     background-color: #7f8d96;
     border-color: #7f8d96;
@@ -34,6 +36,7 @@ body {
     vertical-align: middle;
 }
 
+/*The weather element that displays the city, temperature, weather, icon and the time/date*/
 #weather {
     font-family: Arial, sans-serif;
     font-size: 20px;
@@ -42,7 +45,7 @@ body {
     vertical-align: middle;
 }
 
-
+/*The child of the parent element that displays both the weather element and the weather image*/
 .child {
     display: flex;
     /*flex-direction: row;*/
