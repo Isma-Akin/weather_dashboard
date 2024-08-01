@@ -25,6 +25,7 @@ app.get('/weather', async (req, res) => {
             description: weatherData.current_condition[0].weatherDesc[0].value,
             icon: weatherData.current_condition[0].weatherIconUrl[0].value,
             time: weatherData.current_condition[0].localObsDateTime,
+            weather: weatherData.weather[0].astronomy[0],
         };
         res.json(weather);
     } catch (error) {
