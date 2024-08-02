@@ -57,6 +57,7 @@ const weatherIconMap = {
     'fog': '50d',
 };
 const rainGif = "https://www.icegif.com/wp-content/uploads/2021/10/icegif-453.gif";
+const cloudGif = "https://www.icegif.com/wp-content/uploads/2023/08/icegif-886.gif";
 
 async function getWeather() {
        const city = document.getElementById('city').value;
@@ -72,6 +73,7 @@ async function getWeather() {
         const weatherDiv = document.getElementById('weather');
 
         const description = data.description.trim().toLowerCase();
+        const region = data.region;
 
         const iconCode = weatherIconMap[description] || '01d';
 
@@ -92,6 +94,7 @@ async function getWeather() {
 
         weatherDiv.innerHTML = `
         <h2>${data.city}, ${data.country}</h2>
+        <p>${region}</p>
         <p>${data.temperature}°C</p>
         <p>${description}</p>
         <img src="${iconUrl}" alt="Weather Icon">
@@ -116,6 +119,7 @@ async function getWeatherClick(city) {
         const weatherImageDiv = document.getElementById('weatherimage');
 
         const description = data.description.trim().toLowerCase();
+        const region = data.region;
 
         const iconCode = weatherIconMap[description] || '01d';
 
@@ -127,17 +131,27 @@ async function getWeatherClick(city) {
             weatherDiv.style.backgroundColor = "#e7d0aa";
         } else if (data.temperature >= 10) {
             weatherDiv.style.backgroundColor = "#a9b6b4";
-            weatherImageDiv.innerHTML = `
-            <img src="${rainGif}" alt="Weather image">
-            `
         } else if (data.temperature >= 0) {
             weatherDiv.style.backgroundColor = '#6b7a8f';
         } else {
             weatherDiv.style.backgroundColor = 'green';
         }
 
+        if (description.includes('rain')) {
+            weatherImageDiv.innerHTML = `
+            <img src="${rainGif}" alt="Weather image">
+            `
+        } else if (description.includes('cloud')) {
+            weatherImageDiv.innerHTML = `
+            <img src="${cloudGif}" alt="Weather image">
+            `
+        } else {
+            weatherImageDiv.innerHTML = "";
+        }
+
         weatherDiv.innerHTML = `
         <h2>${data.city}, ${data.country}</h2>
+        <p>${region}</p>
         <p>${data.temperature}°C</p>
         <p>${description}</p>
         <img src="${iconUrl}" alt="Weather Icon">
