@@ -21,6 +21,7 @@ app.get('/weather', async (req, res) => {
         const weather = {
             city: weatherData.nearest_area[0].areaName[0].value,
             country: weatherData.nearest_area[0].country[0].value,
+            region: weatherData.nearest_area[0].region[0].value,
             temperature: weatherData.current_condition[0].temp_C,
             description: weatherData.current_condition[0].weatherDesc[0].value,
             icon: weatherData.current_condition[0].weatherIconUrl[0].value,
