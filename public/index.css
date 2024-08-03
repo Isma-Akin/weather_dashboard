@@ -13,6 +13,7 @@ body {
 }
 /*The element that controls the attributes of the clickable text of the column*/
 .clickable-text {
+    width: 10%;
     color: #008CBA;
     text-decoration: none;
     margin: 5px 0;
@@ -43,6 +44,7 @@ body {
     text-align: center;
     margin-top: 20px;
     vertical-align: middle;
+    border-radius: 5px;
 }
 
 /*The child of the parent element that displays both the weather element and the weather image*/
