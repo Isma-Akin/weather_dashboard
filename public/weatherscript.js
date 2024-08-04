@@ -58,6 +58,7 @@ const weatherIconMap = {
 };
 const rainGif = "https://www.icegif.com/wp-content/uploads/2021/10/icegif-453.gif";
 const cloudGif = "https://www.icegif.com/wp-content/uploads/2023/08/icegif-886.gif";
+const sunGif = "https://www.icegif.com/wp-content/uploads/2023/07/icegif-767.gif";
 
 async function getWeather() {
        const city = document.getElementById('city').value;
@@ -144,6 +145,10 @@ async function getWeatherClick(city) {
         } else if (description.includes('cloud')) {
             weatherImageDiv.innerHTML = `
             <img src="${cloudGif}" alt="Weather image">
+            `
+        } else if (description.includes('sun')) {
+            weatherImageDiv.innerHTML = `
+            <img src="${sunGif}" alt="Weather image">
             `
         } else {
             weatherImageDiv.innerHTML = "";
