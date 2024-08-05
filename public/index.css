@@ -46,6 +46,16 @@ body {
     vertical-align: middle;
     border-radius: 5px;
 }
+/*The weather image element that displays the corresponding weather animation/gif*/
+#weatherimage {
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 20px;
+    vertical-align: middle;
+    border-radius: 5px;
+    border: 2px solid black;
+}
 
 /*The child of the parent element that displays both the weather element and the weather image*/
 .child {
