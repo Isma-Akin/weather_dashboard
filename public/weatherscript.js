@@ -72,6 +72,7 @@ async function getWeather() {
 
     if (response.status === 200) {
         const weatherDiv = document.getElementById('weather');
+        const weatherImageDiv = document.getElementById('weatherimage');
 
         const description = data.description.trim().toLowerCase();
         const region = data.region;
@@ -91,6 +92,22 @@ async function getWeather() {
             weatherDiv.style.backgroundColor = '#6b7a8f';
         } else {
             weatherDiv.style.backgroundColor = 'green';
+        }
+
+        if (description.includes('rain')) {
+            weatherImageDiv.innerHTML = `
+            <img src="${rainGif}" alt="Weather image">
+            `
+        } else if (description.includes('cloud')) {
+            weatherImageDiv.innerHTML = `
+            <img src="${cloudGif}" alt="Weather image">
+            `
+        } else if (description.includes('sun')) {
+            weatherImageDiv.innerHTML = `
+            <img src="${sunGif}" alt="Weather image">
+            `
+        } else {
+            weatherImageDiv.innerHTML = "";
         }
 
         weatherDiv.innerHTML = `
