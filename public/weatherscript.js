@@ -74,7 +74,8 @@ async function getWeather() {
         const weatherDiv = document.getElementById('weather');
         const weatherImageDiv = document.getElementById('weatherimage');
 
-        const description = data.description.trim().toLowerCase();
+        // Trims the description to remove leading/trailing whitespace
+        const description = data.description.trim();
         const region = data.region;
 
         const iconCode = weatherIconMap[description] || '01d';
@@ -136,7 +137,8 @@ async function getWeatherClick(city) {
         const weatherDiv = document.getElementById('weather');
         const weatherImageDiv = document.getElementById('weatherimage');
 
-        const description = data.description.trim().toLowerCase();
+        // Trims the description to remove leading/trailing whitespace
+        const description = data.description.trim();
         const region = data.region;
 
         const iconCode = weatherIconMap[description] || '01d';
