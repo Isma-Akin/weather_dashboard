@@ -118,7 +118,9 @@ async function getWeather() {
         <p>${description}</p>
         <img src="${iconUrl}" alt="Weather Icon">
         <p>${data.time}</p>
-        `;
+        <p>${data.weather.sunrise}</p>
+        <p>${data.weather.sunset}</p>
+    `;
     } else {
         alert(data.error);
     }
