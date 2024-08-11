@@ -182,7 +182,9 @@ async function getWeatherClick(city) {
         <p>${description}</p>
         <img src="${iconUrl}" alt="Weather Icon">
         <p>${data.time}</p>
+        <p>Sunrise</p>
         <p>${data.weather.sunrise}</p>
+        <p>Sunset</p>
         <p>${data.weather.sunset}</p>
     `} else {
         alert(data.error);
