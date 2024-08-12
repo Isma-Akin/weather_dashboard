@@ -1,5 +1,6 @@
 const weatherIconMap = {
     'clear sky': '01d',
+    'sunny': '01d',
     'clear': '01d',
     'few clouds': '02d',
     'cloudy': '02d',
