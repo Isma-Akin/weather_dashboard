@@ -159,15 +159,15 @@ async function getWeatherClick(city) {
             weatherDiv.style.backgroundColor = 'green';
         }
 
-        if (description.includes('rain')) {
+        if (description.includes('Rain') || description.includes('Drizzle') || description.includes('rain')) {
             weatherImageDiv.innerHTML = `
             <img src="${rainGif}" alt="Weather image">
             `
-        } else if (description.includes('cloud')) {
+        } else if (description.includes('cloud') || description.includes('Cloud')) {
             weatherImageDiv.innerHTML = `
             <img src="${cloudGif}" alt="Weather image">
             `
-        } else if (description.includes('sun')) {
+        } else if (description.includes('Sun') || description.includes('sun')) {
             weatherImageDiv.innerHTML = `
             <img src="${sunGif}" alt="Weather image">
             `
