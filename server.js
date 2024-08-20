@@ -1,8 +1,4 @@
-const express = require('express');
-const axios = require('axios');
-const path = require('path');
-const app = express();
-const port = 3000;
+const { port, app, path, express, axios } = require('./external/constants');
 
 
 app.use(express.static(path.join(__dirname, 'public')));
