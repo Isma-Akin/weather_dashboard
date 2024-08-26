@@ -7,3 +7,4 @@ Features to implement:
 
 Things to fix:
 - Incorrect cities showing up
+- Gifs not showing depending on weather
