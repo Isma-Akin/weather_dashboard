@@ -3,7 +3,7 @@
 Features to implement:
 - Astronomy
 - Wind speeds
-
+- Add dynamic background based on weather
 
 Things to fix:
 - Incorrect cities showing up
