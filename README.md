@@ -10,4 +10,4 @@ Things to fix:
 - Gifs not showing depending on weather
 
 Things to remove:
--Button to type cities
+- Button to type cities
