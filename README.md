@@ -5,6 +5,7 @@ Features to implement:
 - Wind speeds
 - Add dynamic background based on weather
 - City images
+- Suggestions
 
 Things to fix:
 - Incorrect cities showing up
