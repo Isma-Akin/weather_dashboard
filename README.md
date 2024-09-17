@@ -6,6 +6,7 @@ Features to implement:
 - Add dynamic background based on weather
 - City images
 - Suggestions
+- Checking news in a country
 
 Things to fix:
 - Incorrect cities showing up
