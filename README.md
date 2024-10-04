@@ -16,3 +16,6 @@ Things to remove:
 - Button to type cities
 - Title
 - Wind speed
+
+Suggestions:
+- Add sports tab
