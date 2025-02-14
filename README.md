@@ -18,3 +18,4 @@ Things to remove:
 
 Suggestions:
 - Add sports tab
+- City comparison
