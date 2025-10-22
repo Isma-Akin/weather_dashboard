@@ -21,3 +21,4 @@ Suggestions:
 - Add sports tab
 - City comparison
 - Dynamic backgrounds
+- Comparing weather
