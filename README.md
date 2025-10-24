@@ -19,6 +19,7 @@ Things to remove:
 
 Suggestions:
 - Add sports tab
+- Add weather history
 - City comparison
 - Dynamic backgrounds
 - Comparing weather
