@@ -7,6 +7,7 @@ Features to implement:
 - City images
 - Suggestions
 - Checking news in a country
+- Framework migration
 
 Things to fix:
 - Incorrect cities showing up
