@@ -1,0 +1,39 @@
+// class App {
+
+// register = getElementByCSS('ico-register')
+// registerTitle = getElementByCSS('page-title')
+
+// login = getElementByCSS('ico-login')
+
+// wishlist = getElementByCSS('ico-wishlist')
+
+// getRegister() {
+//     register.click();
+// }
+
+// getLogin() {
+//     login.click();
+// }
+
+// getWishlist() {
+//     wishlist.click();
+// }
+
+// }
+
+// class Test {
+//     const app = new App();
+
+//     getRegister();
+//     expect("body").contains("Your Personal Details")
+// }
+
+class App {
+
+    title = getElementByCSS('')
+    button = getElementByCSS('')
+
+    getTitle() {
+        title.click();
+    }
+}
