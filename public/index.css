@@ -12,6 +12,10 @@ h1 {
     padding: 10px;
     margin: 10px;
 }
+
+h2 {
+    color: rgb(170, 180, 175);
+}
 /*The element that controls the actual column's attributes*/
 .clickable-text-column{
     display: flex;
