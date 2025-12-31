@@ -60,6 +60,7 @@ const weatherIconMap = {
 const rainGif = "https://www.icegif.com/wp-content/uploads/2021/10/icegif-453.gif";
 const cloudGif = "https://www.icegif.com/wp-content/uploads/2023/08/icegif-886.gif";
 const sunGif = "https://www.icegif.com/wp-content/uploads/2023/07/icegif-767.gif";
+const mistGif = "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcHdvZndyMTQycHMxeWQxNnhvenRyYzlvdm5yeDBiZGt2bGprZTdzdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZWRCWdUymIGNW/giphy.gif";
 
 async function getWeather() {
        const city = document.getElementById('city').value;
@@ -93,7 +94,7 @@ async function getWeather() {
         } else if (data.temperature >= 0) {
             weatherDiv.style.backgroundColor = '#6b7a8f';
         } else {
-            weatherDiv.style.backgroundColor = 'green';
+            weatherDiv.style.backgroundColor = '#d3dad9ff';
         }
 
         if (description.includes('rain')) {
@@ -108,7 +109,12 @@ async function getWeather() {
             weatherImageDiv.innerHTML = `
             <img src="${sunGif}" alt="Weather image">
             `
-        } else {
+        } else if (description.includes('mist')) {
+            weatherImageDiv.innerHTML = `
+            <img src="${mistGif}" alt="Weather image">
+            `
+        }
+          else {
             weatherImageDiv.innerHTML = "";
         }
 
@@ -173,6 +179,10 @@ async function getWeatherClick(city) {
         } else if (description.includes('Sun') || description.includes('sun')) {
             weatherImageDiv.innerHTML = `
             <img src="${sunGif}" alt="Weather image">
+            `
+        } else if (description.includes('mist') || description.includes('Mist')) {
+            weatherImageDiv.innerHTML = `
+            <img src="${mistGif}" alt="Weather image">
             `
         } else {
             weatherImageDiv.innerHTML = "";
