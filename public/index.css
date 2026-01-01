@@ -1,10 +1,30 @@
+/* :root {
+    --bg-color: #ffffff;
+    --text-color: #1a1a1a;
+    --link-color: #0066cc;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #121212;
+        --text-color: #f0f0f0;
+        --link-color: #66b3ff;
+    }
+} */
 /*The element that controls the attributes of the body of the html doc*/
 body {
     font-family: Calibri, sans-serif;
     text-align: center;
     padding: 20px;
     font-size: 25px;
+    /* background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3;; */
 }
+
+/* a {
+    color: var(--link-color);
+} */
 
 h1 {
     background-color: gainsboro;
@@ -16,6 +36,11 @@ h1 {
 h2 {
     color: rgb(170, 180, 175);
 }
+
+h3 {
+    color: rgb(170, 180, 175);
+}
+
 /*The element that controls the actual column's attributes*/
 .clickable-text-column{
     display: flex;
@@ -24,10 +49,10 @@ h2 {
 }
 /*The element that controls the attributes of the clickable text of the column*/
 .clickable-text {
-    width: 10%;
+    width: 21.40%;
     color: #21363d;
     text-decoration: none;
-    margin: 5px 0;
+    margin: 3px 0;
     padding: 10px;
     border: 2px solid black;
     border-radius: 5px;
@@ -38,6 +63,10 @@ h2 {
 .clickable-text:hover {
     background-color: #7f8d96;
     border-color: #7f8d96;
+}
+
+#city {
+    width: 12.40%;
 }
 
 #weather img {
