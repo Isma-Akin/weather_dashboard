@@ -14,7 +14,6 @@ Things to fix:
 
 Things to remove:
 - Button to type cities
-- Wind speed
 
 Suggestions:
 - Add sports tab
