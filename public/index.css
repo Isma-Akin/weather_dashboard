@@ -98,7 +98,7 @@ h3 {
 }
 
 /*The child of the parent element that displays both the weather element and the weather image*/
-.child {
+.weatherChild {
     display: flex;
     /*flex-direction: row;*/
     /*align-items: center;*/
@@ -106,4 +106,8 @@ h3 {
     /*height: 100%;*/
     /*width: 100%;*/
     /*float: none;*/
+}
+
+#weatherClass {
+    visibility: hidden;
 }
