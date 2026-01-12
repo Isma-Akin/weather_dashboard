@@ -4,7 +4,6 @@ Features to implement:
 - Wind speeds
 - Add dynamic background based on weather
 - City images
-- Checking news in a country
 - Framework migration
 
 Things to fix:
@@ -15,7 +14,6 @@ Things to fix:
 
 Things to remove:
 - Button to type cities
-- Wind speed
 
 Suggestions:
 - Add sports tab
