@@ -12,6 +12,7 @@ Things to fix:
 - Duplicate cities
 - Duplicate temperatures
 - Weather element not displaying after selecting/typing a city
+- More weather gifs
 
 Things to remove:
 - Button to type cities
