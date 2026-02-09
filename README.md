@@ -23,3 +23,4 @@ Suggestions:
 - City comparison
 - Dynamic backgrounds
 - Comparing weather
+- Refactoring weather icons/gifs
