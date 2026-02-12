@@ -7,23 +7,30 @@
     <title>Weather Forecast</title>
 </head>
 <body>
+    <div id="loader" class="loader hidden" aria-hidden="true"></div>
 <h1>City Weather Forecast</h1>
-<h2>Select a city below</h2>
-<div class="clickable-text-column">
-    <a href="#" class="clickable-text" onclick="getWeatherClick('London')">London</a>
-    <a href="#" class="clickable-text" onclick="getWeatherClick('New York')">New York</a>
-    <a href="#" class="clickable-text" onclick="getWeatherClick('Tokyo')">Tokyo</a>
-    <a href="#" class="clickable-text" onclick="getWeatherClick('Sydney')">Sydney</a>
-</div>
-<h3>Or enter a city name:</h3>
-<label for="city"></label><input type="text" id="city" placeholder="Enter a city name"/>
-<button onclick="getWeather()">Get the weather!</button>
+<div class="main">
 
-<div class="weatherAdult" id="weatherClass">
-    <div class="weatherChild">
+    <div id="weatherClass" class="weatherClass">
         <div id="weather"></div>
         <div id="weatherimage"></div>
     </div>
+    
+    <label for="city"></label><input type="text" id="city" placeholder="Enter a city name"/>
+
+    <button id="button" onclick="getWeather()">Get the weather!</button>  
+    <br>
+  
+    <div class="column-container">        
+
+        <div class="clickable-city-column">
+                <a href="#" class="clickable-city-text" onclick="getWeatherClick('London')">London</a>
+                <a href="#" class="clickable-city-text" onclick="getWeatherClick('New York')">New York</a>
+                <a href="#" class="clickable-city-text" onclick="getWeatherClick('Tokyo')">Tokyo</a>
+                <a href="#" class="clickable-city-text" onclick="getWeatherClick('Sydney')">Sydney</a>
+        </div>
+    </div>
+
 </div>
 
 <script src="/weatherscript.js"></script>

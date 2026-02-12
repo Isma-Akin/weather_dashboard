@@ -1,58 +1,47 @@
-/* :root {
-    --bg-color: #ffffff;
-    --text-color: #1a1a1a;
-    --link-color: #0066cc;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg-color: #121212;
-        --text-color: #f0f0f0;
-        --link-color: #66b3ff;
-    }
-} */
-/*The element that controls the attributes of the body of the html doc*/
-body {
-    font-family: Calibri, sans-serif;
-    text-align: center;
-    padding: 20px;
-    font-size: 25px;
-    /* background-color: var(--bg-color);
-    color: var(--text-color);
-    transition: background-color 0.3s, color 0.3;; */
-}
-
-/* a {
-    color: var(--link-color);
-} */
-
 h1 {
-    background-color: gainsboro;
-    border-radius: 10px;
+    /* background-color: gainsboro; */
+    /* border-radius: 10px; */
     padding: 10px;
     margin: 10px;
 }
 
-h2 {
-    color: rgb(170, 180, 175);
+/*The element that controls the attributes of the body of the html doc*/
+body {
+    font-family: Calibri, sans-serif;
+    text-align: center;
+    padding: 30px;
+    font-size: 25px;
+    margin: 0;
 }
-
-h3 {
-    color: rgb(170, 180, 175);
+/*The element that contains all the subsequent div elements on the page*/
+.main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: auto;
+    /* align-content: normal; */
+    /* justify-items: normal; */
+    /* justify-content: center; */
 }
 
 /*The element that controls the actual column's attributes*/
-.clickable-text-column{
+.column-container {
+    background-color: #b0bac0;
+    border-radius: 5px;
+    width: 30%;
+    align-self: center;
+}
+/*The element that houses each of the listed cities*/
+.clickable-city-column {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
+
 /*The element that controls the attributes of the clickable text of the column*/
-.clickable-text {
-    width: 21.40%;
+.clickable-city-text {
     color: #21363d;
     text-decoration: none;
-    margin: 3px 0;
+    /* margin: 3px 0; */
     padding: 10px;
     border: 2px solid black;
     border-radius: 5px;
@@ -65,16 +54,14 @@ h3 {
     border-color: #7f8d96;
 }
 
-#city {
-    width: 12.40%;
-}
-
-#weather img {
-    font-family: Arial, sans-serif;
-    font-size: 25px;
-    text-align: center;
-    margin-top: 20px;
-    vertical-align: middle;
+/*The parent element that displays both the weather element and the weather image*/
+.weatherClass {
+    display: flex;
+    border: 2px solid #070106;
+    align-self: center;
+    justify-self: center;
+    width: 700px;
+    /* visibility: hidden; */
 }
 
 /*The weather element that displays the city, temperature, weather, icon and the time/date*/
@@ -82,32 +69,50 @@ h3 {
     font-family: Arial, sans-serif;
     font-size: 20px;
     text-align: center;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     vertical-align: middle;
     border-radius: 5px;
+    width: 60%;
+    /* padding: 10px; */
 }
-/*The weather image element that displays the corresponding weather animation/gif*/
+
+/*The weather image element that displays the corresponding weather animation gif*/
 #weatherimage {
-    font-family: Arial, sans-serif;
-    font-size: 25px;
-    text-align: center;
-    margin-top: 20px;
-    vertical-align: middle;
-    border-radius: 5px;
-    border: 2px solid black;
-}
-
-/*The child of the parent element that displays both the weather element and the weather image*/
-.weatherChild {
     display: flex;
-    /*flex-direction: row;*/
-    /*align-items: center;*/
-    justify-content: center;
-    /*height: 100%;*/
-    /*width: 100%;*/
-    /*float: none;*/
+    /* flex-direction: column; */
+    /* padding: 10px; */
+    /* width: 35%; */
+    height: 338px;
 }
 
-#weatherClass {
-    visibility: hidden;
+/*The element that allows the user to type in a city*/
+#city {
+    /* width: 12.40%; */
+    background-color: #e6e2de;
+    align-self: center;
+}
+/*The 'Get The Weather' button that fetches the weather for any entered city within the #city label*/
+#button {
+    align-self: center;
+}
+
+/* Spinner loader styles */
+.loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 64px;
+    border: 8px solid rgba(0,0,0,0.1);
+    border-top-color: #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    z-index: 1000;
+}
+.loader.hidden {
+    display: none;
+}
+@keyframes spin {
+    to { transform: translate(-50%, -50%) rotate(360deg); }
 }
