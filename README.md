@@ -4,6 +4,7 @@ Features to implement:
 - Wind speeds
 - Add dynamic background based on weather
 - City images
+- Checking weather based on the time and day of the week
 - Framework migration
 
 Things to fix:
