@@ -56,33 +56,100 @@ body {
 
 /*The parent element that displays both the weather element and the weather image*/
 .weatherClass {
-    display: flex;
+    display: grid;
+    grid-template-areas:
+    "weather daytwo daythree dayfour thursday friday saturday sunday"
+    "weather daytwo daythree dayfour thursday friday saturday sunday"
+    "weather wind astronomy pollen pollen pollen pollen pollen";
+    grid-template-columns: 10fr 10fr 10fr 10fr 10fr 10fr 10fr 10fr;
     border: 2px solid #070106;
     align-self: center;
     justify-self: center;
-    width: 700px;
-    /* visibility: hidden; */
+    /* width: 700px; */
+    visibility: hidden;
 }
 
 /*The weather element that displays the city, temperature, weather, icon and the time/date*/
 #weather {
+    grid-area: weather;
     font-family: Arial, sans-serif;
     font-size: 20px;
     text-align: center;
     /* margin-top: 20px; */
     vertical-align: middle;
     border-radius: 5px;
-    width: 60%;
+    /* width: 60%; */
     /* padding: 10px; */
 }
 
-/*The weather image element that displays the corresponding weather animation gif*/
-#weatherimage {
+#weatherdetails {
+    grid-area: weatherdetails;
     display: flex;
     /* flex-direction: column; */
     /* padding: 10px; */
     /* width: 35%; */
-    height: 338px;
+    /* height: 338px; */
+}
+
+/*The weather image element that displays the corresponding weather animation gif*/
+#weatherimage {
+    grid-area: weatherimage;
+    display: flex;
+    /* flex-direction: column; */
+    /* padding: 10px; */
+    /* width: 35%; */
+    /* height: 338px; */
+}
+
+#weathertab {
+    grid-area: weathertab;
+    align-self: end;
+    height: 100px;
+    /* width: 300px; */
+    background-color: rgb(37, 48, 48);
+}
+
+#daytwo {
+    grid-area: daytwo;
+}
+
+#daythree {
+    grid-area: daythree;
+}
+
+#dayfour {
+    grid-area: dayfour;
+}
+
+#thursday {
+    grid-area: thursday;
+}
+
+#friday {
+    grid-area: friday;
+}
+
+#saturday {
+    grid-area: saturday;
+}
+
+#sunday {
+    grid-area: sunday;
+}
+
+#windtab {
+    grid-area: wind;
+    background-color: chartreuse;
+}
+
+#astronomytab {
+    grid-area: astronomy;
+    background-color: blueviolet;
+}
+
+#pollentab {
+    grid-area: pollen;
+    background-color: dodgerblue;
 }
 
 /*The element that allows the user to type in a city*/
