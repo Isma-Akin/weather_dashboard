@@ -1,4 +1,4 @@
-const { port, app, path, express, axios } = require('./external/constants');
+const { port, app, path, express, axios } = require('./external/constants.js');
 
 
 app.use(express.static(path.join(__dirname, 'public')));
@@ -23,7 +23,7 @@ app.get('/weather', async (req, res) => {
             icon: weatherData.current_condition[0].weatherIconUrl[0].value,
             time: weatherData.current_condition[0].localObsDateTime,
             weather: weatherData.weather[0].astronomy[0],
-            forecast: weatherData.weather[0]
+            forecast: weatherData.weather
         };
         res.json(weather);
     } catch (error) {
