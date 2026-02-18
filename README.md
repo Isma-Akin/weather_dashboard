@@ -4,6 +4,7 @@ Features to implement:
 - Wind speeds
 - Add dynamic background based on weather
 - City images
+- Checking weather based on the time and day of the week
 - Framework migration
 
 Things to fix:
@@ -12,6 +13,7 @@ Things to fix:
 - Duplicate cities
 - Duplicate temperatures
 - Weather element not displaying after selecting/typing a city
+- More weather gifs
 
 Things to remove:
 - Button to type cities
@@ -22,3 +24,4 @@ Suggestions:
 - City comparison
 - Dynamic backgrounds
 - Comparing weather
+- Refactoring weather icons/gifs
